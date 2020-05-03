@@ -1,0 +1,7 @@
+Extracted from proposal.fls Generated using pdflatex -recorder proposal.tex
+
+INPUT images/fiji.png
+INPUT images/royal-palms.png
+INPUT report4/report4.pdf
+INPUT extracts from MF Joint Communique.pdf
+

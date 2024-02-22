@@ -2,7 +2,7 @@
 
 \usepackage{indentfirst}
 \usepackage[titletoc]{appendix}
-%\usepackage{fullpage}
+\usepackage{fullpage}
 %\usepackage{subfiles}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
@@ -36,6 +36,8 @@ breaklinks=true,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=tru
 \usepackage{todonotes}
 
 \usepackage{gensymb}
+
+\usepackage{subcaption}
 
 % Prevent page breaks within paragraphs
 % https://tex.stackexchange.com/questions/21983/how-to-avoid-page-breaks-inside-paragraphs
@@ -192,10 +194,217 @@ Our rearing facility is now starting to produce adults and bioassays will begin 
 
 \subsection{Bioassays of Raw CRB Gut Samples from Palau}
 
+\subsubsection{Objective}
+
+The objective of this experiment is to see if CRB-G adults on Guam become infected with OrNV after being dosed with gut material dissected from CRB adults in Palau, were the natural OrNV infection rate is about 70\% (Kitalong, personal communication).
+
+Each beetle in a treatment group will receive a single dose of a pooled sample of gut material applied to a banana slice. An experiment control group of beetles will be fed untreated banana slices.
+
+The response variable will be longevity.
+
+\subsubsection{Materials and Methods}
+
+\paragraph{Gut Samples}
+Gut samples dissected from CRB adults collected from Babeldaub, Palau were placed in Eppendorf tubes, frozen and brought to UOG by Dr. Chris Kitalong on November 11, 2022. These were stored in a household freezer at about -20 degrees C. Gut samples were crude with many containing male genitalia or eggs.
+
+\paragraph{Test Insects}
+CRB adults were collected from pheromone traps at Leo Palace Golf course, Guam December 2, 2022. These were placed individually into one pint Mason jars containing moist coir (CocoBrick). Each Mason jar was labeled with a unique integer serial number. Beetles were left unfed until the start of the bioassay.
+
+\paragraph{Treatment}
+
+Beetles were dosed by diet inclusion on December 6, 2022.  The gut sample within each Eppindorf tube was macerated using a toothpick. 
+The toothpick was then used to transfer the sample into in a mortar containing small amount of water. A new toothpick was used to process each tube. After gut material from all Eppendorf tubes had been added to the mortar, this material was further macerated using a pestle. The macerate was transferred to a beaker and water was added to a total volume of 100 ml. Each beetle was dosed by dipping a banana slice into the beaker and placing this slice into the Mason jar containing the beetle. Half of the beetles were presented with untreated banana slices to provide an experimental control group. 
+
+\paragraph{Observations}
+
+Each beetle was observed every second day and fed a banana slice once a week. Each dead beetle was placed in a labeled sample container and stored in a domestic freezer at about -20 degrees C. Jars in which dead females had been kept were retained for 14 days at which time they were checked for larvae.
+
+\paragraph{Post Mortem}
+
+At the conclusion of the experiment, midguts were extracted, run through PCR, and tested for presence of OrNV. Data for OrNV detection are recorded in \href{https://docs.google.com/spreadsheets/d/16k_lN9cihTnvhMoP54xnTwzWUBTzk1yDP79HW02dy5M/edit#gid=784130063}{this Google spreadsheet} in the \textbf{Aubrey's experiment} tab.
+
+\paragraph{Analysis}
+
+Data and Jupyter notebooks used for analysis are available in \href{https://github.com/aubreymoore/palau-guts-experiment}{this public GitHub repository}. 
+
+\subsubsection{Results}
+
+\paragraph{Mortality} Difference between mortality curves of treated and untreated beetles was insignificant (Fig. \ref{fig:palau-bioassay-1-survival-curves}).
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"images/Palau bioassay 1 survival curves"}
+	\caption{Survival curves.}
+	\label{fig:palau-bioassay-1-survival-curves}
+\end{figure}
+
+\paragraph{Fecundity} The difference in fecundity between treated and untreated females was insignificant (Table \ref{fecundity contingency table}). In addition. the difference in mean number of larvae produced by treated and untreated females was insignificant (Table \ref{larvae per female}).
+\begin{table}[H]
+	\centering
+	\caption{Contingency table for fecundity. Difference between groups is not significant (Fisher's exact test; p = 0.36)}
+	\label{fecundity contingency table}
+	\begin{tabular}{lcc}
+		\hline
+		& females not producing larvae & females producing larvae \\
+		\hline
+		untreated group & 31 & 17 (35\%) \\
+		virus-treated group & 18 & 16 (47\%)\\
+		\hline
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Number of larvae produced per female. Difference between group means is not significant (independent t-test; p = 0.56)}
+	\label{larvae per female}
+	\begin{tabular}{lcc}
+		\hline
+		& n & mean larvae per female \\
+		\hline
+		untreated group & 48 & 1.00 \\
+		virus-treated group & 34 & 0.71 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\paragraph{OrNV detection} About a third of beetles in both treatment groups tested positive for OrNV (Table \ref{ornv detection}). This is an unexpected result.
+
+\begin{table}[H]
+	\centering
+	\caption{OrNV detection.}
+	\label{ornv detection}
+	\begin{tabular}{lcc}
+		\hline
+		treatment & \multicolumn{2}{c}{OrNV detection} \\ \cline{2-3}
+		          & Negative & Positive \\
+		\hline
+		control   & 26 & 15 (37\%)\\
+		virus     & 29 & 15 (34\%)\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\clearpage
+
 \subsection{Bioassay of OrNV from Palau Prepared by the Tokyo University of Agriculture and Technology}
 
-\subsection{Bioassay of OrNV Isolates Prepared by Agresearch New Zealand}
+\subsubsection{Results}
 
+\paragraph{OrNV detection} About a third of beetles in both treatment groups tested positive for OrNV (Table \ref{ornv detection}). This is an unexpected result.
+
+\begin{table}[H]
+	\centering
+	\caption{OrNV detection.}
+	\label{ornv detection}
+	\begin{tabular}{lcc}
+		\hline
+		treatment  & \multicolumn{2}{c}{OrNV detection} \\ \cline{2-3}
+		& Negative & Positive \\
+		\hline
+		control    & 00 & 00 (00\%)\\
+		virus      & 00 & 00 (00\%)\\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+\clearpage
+\subsection{Bioassay of OrNV Isolates from AgResearch New Zealand}
+
+Text goes here.
+
+% DUG42 survival curves.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\linewidth]{images/survival_curves/2023-07-31-DUG42}
+		\caption{Replicate 1.}
+	\end{subfigure}
+	%\hfill
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-04-DUG42}
+		\caption{Replicate 2.}
+	\end{subfigure}
+	%\hfill
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-15-DUG42}
+		\caption{Replcate 3.}
+	\end{subfigure}
+	%\hfill
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-24-DUG42}
+		\caption{Replicate 4.}
+	\end{subfigure}
+	%\hfill
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-31-DUG42}
+		\caption{Replicate 5.}
+	\end{subfigure}
+	\caption{Survival curves for bioassays of OrNV isolate DUG42.}
+	\label{fig:DUG42 survival curves}
+\end{figure}
+
+% PNG survival curves
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\linewidth]{images/survival_curves/2023-08-15-PNG}
+		\caption{Replicate 1.}
+	\end{subfigure}
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-24-PNG}
+		\caption{Replicate 2.}
+	\end{subfigure}
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-31-PNG}
+		\caption{Replcate 3.}
+	\end{subfigure}
+	\caption{Survival curves for bioassays of OrNV isolate PNG.}
+	\label{fig:PNG survival curves}
+\end{figure}
+
+% V23B survival curves
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\linewidth]{images/survival_curves/2023-08-15-V23B}
+		\caption{Replicate 1.}
+	\end{subfigure}
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-24-V23B}
+		\caption{Replicate 2.}
+	\end{subfigure}
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-31-V23B}
+		\caption{Replcate 3.}
+	\end{subfigure}
+	\caption{Survival curves for bioassays of OrNV isolate V23B.}
+	\label{fig:V23B survival curves}
+\end{figure}
+
+% X2B survival curves
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\linewidth]{images/survival_curves/2023-08-15-X2B}
+		\caption{Replicate 1.}
+	\end{subfigure}
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-24-X2B}
+		\caption{Replicate 2.}
+	\end{subfigure}
+	\begin{subfigure}{.3\textwidth}
+		\includegraphics[width=\textwidth]{images/survival_curves/2023-08-31-X2B}
+		\caption{Replcate 3.}
+	\end{subfigure}
+	\caption{Survival curves for bioassays of OrNV isolate X2B.}
+	\label{fig:X2B survival curves}
+\end{figure}
+
+
+\clearpage
 \subsection{Previously reported progress}
 
 \clearpage

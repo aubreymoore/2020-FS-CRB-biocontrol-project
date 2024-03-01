@@ -39,6 +39,8 @@ breaklinks=true,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=tru
 
 \usepackage{subcaption}
 
+\usepackage{siunitx}
+
 % Prevent page breaks within paragraphs
 % https://tex.stackexchange.com/questions/21983/how-to-avoid-page-breaks-inside-paragraphs
 \widowpenalties 1 10000
@@ -51,18 +53,18 @@ breaklinks=true,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=tru
 
 \author{Aubrey Moore PhD\\University of Guam College of Natural and Applied Sciences}
 
-%\date{January 30, 2023}
+\date{February 29, 2024}
 
 \maketitle
 
 \begin{description}
 	\item[Federal ID] 20-DG-11052021-229
-	\item[Reporting period] ???? through 2022-12-30
+	\item[Reporting period] 2020-06-17 through 2023-12-31
 \end{description}
 
-
+Most recent online version: \\
 \begin{footnotesize}	
-%	\url{https://github.com/aubreymoore/2020-FS-CRB-biocontrol-project/raw/master/fs-report-202212/fs-report-202212.pdf}
+	\url{https://github.com/aubreymoore/2020-FS-CRB-biocontrol-project/raw/master/fs-report-FINAL/fs-report-final.pdf}
 \end{footnotesize}
 
 \clearpage
@@ -221,7 +223,7 @@ Each beetle was observed every second day and fed a banana slice once a week. Ea
 
 \paragraph{Post Mortem}
 
-At the conclusion of the experiment, midguts were extracted, run through PCR, and tested for presence of OrNV. Data for OrNV detection are recorded in \href{https://docs.google.com/spreadsheets/d/16k_lN9cihTnvhMoP54xnTwzWUBTzk1yDP79HW02dy5M/edit#gid=784130063}{this Google spreadsheet} in the \textbf{Aubrey's experiment} tab.
+At the conclusion of the experiment, midguts were extracted, run through PCR, and tested for presence of OrNV using the methods of Tanaka \textit{et al.} 2021 \cite{tanakaConfirmationOryctesRhinoceros2021a}.Data for OrNV detection are recorded in \href{https://docs.google.com/spreadsheets/d/16k_lN9cihTnvhMoP54xnTwzWUBTzk1yDP79HW02dy5M/edit#gid=784130063}{this Google spreadsheet} in the \textbf{Aubrey's experiment} tab.
 
 \paragraph{Analysis}
 
@@ -286,9 +288,136 @@ Data and Jupyter notebooks used for analysis are available in \href{https://gith
 
 \subsection{Bioassay of OrNV from Palau Prepared by the Tokyo University of Agriculture and Technology}
 
+Note: This bioassay was designed and performed in collaboration with Mayuho Yamauchi, a visiting graduate student from the Tokyo University of Agriculture and Technology (TUAT).
+A news story about this collaboration is available at:\\
+\begin{tiny}
+\url{https://www.uog.edu/news-announcements/2022-2023/2023-uog-tokyo-university-test-a-virus-on-guams-rhino-beetles.php}
+\end{tiny}
+
+\subsubsection{Objective}
+
+This the major objective of this bioassay was to determine if there was a reduction in flight activity after dosing Guam CRB adults with an isolate of OrNV from Palau.
+
+\subsubsection{Materials and Methods}
+
+\paragraph{OrNV Samples}
+
+The OrNV isolate used in this bioassay were collected from Palau and purified at TUAT.
+
+\paragraph{Test Insects}
+
+We used CRB adults collected from pheromone traps at the Leo Palace Resort on Guam.
+
+\paragraph{Treatment}
+
+Instead of treating individual we treated 4 cohorts of about 30 beetles each. Observations of individual insects were recorded using serial numbers etched on elytra using a laser marking machine. Each cohort was kept in an open 1 US gallon (3.8 liter) paint can half filled with moist cocopeat (Burpee Organic Seed Starting Mix). Cohorts were labeled A, B, C and D. Each paint can was kept in a large plastic garbage bin(Fig. \ref{fig:2023-uog-crb-moore-yamauchi-web}). Metal window screen covered the top of each bin. The lab air conditioner was set at 30 degrees C when no-one was working in it and all lights were turned off between 1800 h and 0600 h.
+
+Beetles were fed by placing 30 grams of fresh banana paste on top of the cocopeat. Initial feeding dates were March 3 for cohort A, March 4 for cohort B, and March 5 for cohorts C and D. Beetles were fed weekly thereafter. 
+
+Dosing was accomplished by incorporating 3.75 ml of the purified OrNV solution from TUAT into banana paste fed to cohorts C and D on the first feeding date (March 5).
+
+\paragraph{Observations}
+
+Each morning, beetles which had flown during the night were collected from the floor of each garbage bin and beetle serial numbers were recorded before they were returned to the paint cans. Mortality was checked daily. Dead beetles were stored in a freezer.
+
+\paragraph{Post Mortem}
+
+At the end of the experiment presence of OrNV was was determined using the methods of Tanaka \textit{et al.} 2021 \cite{tanakaConfirmationOryctesRhinoceros2021a}.
+
+\paragraph{Analysis}
+
+Data and Jupyter notebooks used for analysis are available in \href{https://github.com/aubreymoore/crb-flight-test}{this public GitHub repository}. 
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/2023-uog-crb-moore-yamauchi-web}
+	\caption{\textbf{Experimental setup.} Each of the garbage bins contained an open paint can, half filled with moist cocopeat in which CRB adults hid during the day. At 1800 h, overhead lights were turned off and beetles were able to fly out of the cans. Beetles which flew were collected at the bottom of the bins in morning.}
+	\label{fig:2023-uog-crb-moore-yamauchi-web}
+\end{figure}
+
+\clearpage
 \subsubsection{Results}
 
-\paragraph{OrNV detection} About a third of beetles in both treatment groups tested positive for OrNV (Table \ref{ornv detection}). This is an unexpected result.
+\paragraph{Mortality}
+
+Difference between survival curves for virus-treated and untreated beetles was insignificant (Fig. \ref{fig:flight_test_survival_curves}).
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/flight_test/survival_curves}
+	\caption{Survival curves}
+	\label{fig:flight_test_survival_curves}
+\end{figure}
+
+\clearpage
+\paragraph{Flight activity}.
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/flight_test/flight_activity}
+	\caption{Flight activity.}
+	\label{fig:flightactivity}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\caption{\textbf{Flight activity.} Effect of treatment on flight activity was not significant. A Fisher exact test was applied to data for each date to test the hypothesis that flight activity was greater for beetles in the untreated control group. A combined p-value of 0.62 was calculated using Fisher's method.}
+	\label{ornv detection}
+	\begin{tabular}{l cc cc c}
+		\toprule
+		& \multicolumn{2}{c}{number of beetles which flew} & \multicolumn{2}{c}{number of beetles which did not fly} & \\
+		\cmidrule(lr){2-3} \cmidrule(lr){4-5}		
+		date       &  control         &  virus         &  control           &  virus           & p        \\
+		\midrule
+		2023-03-07 &               12 &              6 &                 45 &               46 & 0.1404 \\
+		2023-03-08 &                6 &              2 &                 51 &               50 & 0.1672 \\
+		2023-03-09 &                4 &              1 &                 51 &               50 & 0.2060 \\
+		2023-03-10 &                2 &              2 &                 52 &               47 & 0.7271 \\
+		2023-03-11 &                1 &              2 &                 53 &               47 & 0.8958 \\
+		2023-03-12 &                3 &              3 &                 51 &               45 & 0.7154 \\
+		2023-03-13 &                3 &              0 &                 46 &               47 & 0.1289 \\
+		2023-03-15 &                2 &              0 &                 44 &               47 & 0.2419 \\
+		2023-03-16 &                6 &              2 &                 40 &               45 & 0.1267 \\
+		2023-03-17 &                1 &              2 &                 45 &               45 & 0.8750 \\
+		2023-03-18 &                1 &              0 &                 44 &               47 & 0.4891 \\
+		2023-03-19 &                0 &              1 &                 45 &               46 & 1.0000 \\
+		2023-03-20 &                1 &              2 &                 43 &               41 & 0.8836 \\
+		2023-03-28 &                0 &              1 &                 27 &               26 & 1.0000 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\clearpage
+\paragraph{Food consumption}
+
+Differences in food consumption between untreated and virus-treated beetles were not significant.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=\linewidth]{images/food_consumption_2023-03-13}
+	\end{subfigure}
+	%\hfill
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=\textwidth]{images/food_consumption_2023-03-20}
+	\end{subfigure}
+	%\hfill
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=\textwidth]{images/food_consumption_2023-04-03}
+	\end{subfigure}
+	%\hfill
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=\textwidth]{images/food_consumption_2023-04-10}
+	\end{subfigure}
+	\caption{Food consumption.}
+	\label{fig:Palau2 food consumption}
+\end{figure}
+
+\clearpage
+\paragraph{OrNV detection}.
 
 \begin{table}[H]
 	\centering
@@ -299,17 +428,72 @@ Data and Jupyter notebooks used for analysis are available in \href{https://gith
 		treatment  & \multicolumn{2}{c}{OrNV detection} \\ \cline{2-3}
 		& Negative & Positive \\
 		\hline
-		control    & 00 & 00 (00\%)\\
-		virus      & 00 & 00 (00\%)\\
+		control    & 15 & 0 ( 0\%)\\
+		virus      & 14 & 3 (18\%)\\
 		\hline
 	\end{tabular}
 \end{table}
 
-
 \clearpage
 \subsection{Bioassay of OrNV Isolates from AgResearch New Zealand}
 
-Text goes here.
+\subsubsection{Objective}
+
+The major objective of this bioassay was to assess four OrNV isolates as potential biological control agents for the Guam CRB population. 
+
+\subsubsection{Materials and Methods}
+
+\paragraph{OrNV Samples}
+
+Purified OrNV samples labeled DUG42, PNG, V23B and X2B were provided by AgResearch New Zealand.
+Samples were delivered at a standardized titre of 1 x 10 6 infectious units per milliliter (IU/mL), with virus supplied in 1 mL
+aliquots. According to \cite{AgResearch2023-OrNV-prep2023}, the minimum dose recommended to establish infection in a susceptible beetle is 5000 IU and a maximum challenge dose should be from 40,000 to 50,000 IU.
+
+\paragraph{Test Insects}
+
+CRB adults were collected from pheromone traps at the Leo Palace Resort. Each beetle was kept in a Mason jar half filled with moist cocopeat (Burpee Organic Seed Starting Mix). Beetles were kept for 2 weeks prior to being used in the bioassay.
+
+\paragraph{Treatment}
+
+The standard method for dosing CRB adults with OrNV is to apply droplets of a sugar solution containing virus particles to the mouthparts using a pipette \cite{AgResearch2023-OrNV-prep2023,AgResearch2023-OrNV-minitest}. In tests with Guam beetles very few beetles imbibed the target dose. As an alternative, we developed a tube method \cite{tube-dosing-method} where beetles were fed a 10\% sugar solution containing OrNV particles by placing them in Falcon tubes with so that their mouthparts were submerged in the solution (Fig. \ref*{fig:tubemethod}).
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[H]
+	\centering
+	\caption{\textbf{Tube method.} Beetles were dosed by immersing mothparts in 2 ml of 10\% sucrose containing 1 million IU of OrNV.}
+	\label{fig:tubemethod}
+	\includegraphics[angle=-90,origin=c,width=0.15\linewidth]{images/tube_method}
+\end{figure} 
+
+To prepare the dosing solution, we mixed 1 ml of virus solution with 1m of 20\% sucrose, resulting in a 10\% sucrose solution containing virus at a titre of 500 IU per microlitre (approximately equal to 500 IU per milligram). Thus, to acquire a target maximum challenge dose of 50,000 IU, a beetle would have to drink 100 milligrams of the solution. Each beetle was placed in a Falcon tube for 10 to 15 minutes. Dose was estimated by weighing the beetle before and after it was placed in the tube. During the bioassay, lab temperature was maintained at 85 \degree F (29.4 \degree C) when no-one was working in it (Fig. \ref{fig:lab}). 
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/lab}
+	\caption{Each Mason jar contains a CRB adult in a OrNV bioassay.}
+	\label{fig:lab}
+\end{figure}
+ 
+
+
+\paragraph{Observations}
+
+Beetles were checked for mortality every day or second day. A postmortem was performed on each dead beetle on the day it was found.
+
+\paragraph{Post Mortem}
+
+Post mortems were performed using the standard method \cite{AgResearch2023-OrNV-minitest}. Beetles were considered to be dead when there was no leg movement. However, after elytra were removed, microscopic examination revealed that the dorsal heart was still beating in many specimens. During the post mortem examination each beetle was examined externally and internally under a stereozoom microscope to determine presence of mites and nematodes. Presence of a heartbeat was also recorded. An image of the mid gut of each beetle prior to excision was recorded with a cell phone camera. 
+Excised midgut samples were shipped to AgResearch New Zealand for molecular analysis and histology.
+
+\paragraph{Analysis}
+
+Data and Jupyter notebooks used for analysis are available in \href{https://github.com/aubreymoore/ornv-bioassay-db}{this public GitHub repository}. 
+
+\clearpage
+\subsubsection{Results}
+
+\paragraph{Mortality}.
 
 % DUG42 survival curves.
 
@@ -403,13 +587,85 @@ Text goes here.
 	\label{fig:X2B survival curves}
 \end{figure}
 
+\clearpage
+\paragraph{Post mortem observations}
+
+\paragraph{Heartbeat.} Many beetles which were deemed dead because they had stopped moving their legs were actually alive. 45\% of beetles examined during post mortems had heartbeats. These heartbeats were evident as movement beneath the dorsum only after elytra had been removed.  
+
+\paragraph{Mites.} 23\% of beetles harbored mites commonly seen during CRB rearing.
+
+\paragraph{Nematodes.} On August 14, 2023 while doing postmortem examinations of adult beetles which died in these assays, we detected nematodes on the dorsal surface of the abdomen of a dead beetle. \href{https://www.youtube.com/shorts/dKVup7q7FF0}{Click here} to see a YouTube video of the original discovery. This is the first record for nematodes associated with CRB on Guam \cite{Moore2023nematodes}.
+
+Since then, we have observed that 60\%  of dead or dying adult beetles from the bioassays have been infested with nematodes (Fig. \ref{fig:nematode2}). Most of the time, these are observed underneath the elytra or on the ventral surface of the abdomen. Numbers range from a few to hundreds of nematodes per beetle. On several occasions, nematodes were observed swimming within the hemocoel.
+
+These nematodes have not been identified and we do not know if they are entomopathogens which may be useful biological control agents.
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/nematode2}
+	\caption{Nematode collected from beneath elytra of an adult coconut rhinoceros beetle, \textit{Oryctes rhinoceros}. Length is 0.36 mm.}
+	\label{fig:nematode2}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\caption{Percent of post mortem observations in which mites, nematodes and heartbeat were present.}
+	\label{ornv detection}
+
+	\begin{tabular}{lrrr}
+		\hline
+		treatment &  mites &  nematodes &  heartbeat \\
+		\hline
+		CONTROL &         25 &        50 &             50 \\
+		DUG42 &         33 &        66 &             46 \\
+		PNG &         22 &        63 &             40 \\
+		V23B &         26 &        61 &             50 \\
+		X2B &          9 &        54 &             40 \\
+		\hline
+		Mean & 23 & 60 & 45 \\
+		\hline
+	\end{tabular}
+\end{table}
+
 
 \clearpage
-\subsection{Previously reported progress}
+
+\paragraph{Dosage}.
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[h]
+	\centering
+	\caption{Distribution of OrNV doses consumed by CRB adults used in bioassays. The target dose of 50,000 IU is indicated be the red line. 93 beetles consumed less than the target dose and 45 consumed more than the target dose.}
+	\includegraphics[width=0.7\linewidth]{images/dosage_distribution}
+	\label{fig:dosagedistribution}
+\end{figure}
+
+
+
+\paragraph{OrNV detection}
+
+Only a small proportion of gut samples sent to AgResearch New Zealand have been processed because a physical move to a new facility caused delays. Preliminary results (Table \ref{ornv detection}) indicate that all specimens belong to the CRB-G clade and beetles dosed with all 4 OrNV isolates resulted in infection.
+
+\begin{table}[H]
+	\centering
+	\caption{OrNV detection.}
+	\label{ornv detection}
+	\begin{tabular}{lcc}
+		\hline
+		treatment  & \multicolumn{2}{c}{OrNV detection} \\ \cline{2-3}
+		& Negative & Positive \\
+		\hline
+		CONTROL    & 15 & 0 (0\%) \\
+		DUG42      & 8  & 2 (20\%) \\
+		PNG        & 2  & 2 (50\%) \\		
+		V23B       & 1  & 2 (67\%) \\
+		X2B3       & 3  & 1 (25\%) \\
+		\hline
+	\end{tabular}
+\end{table}
 
 \clearpage
-
-
 \section{Objective 3:  Establish Island-wide Monitoring Systems for CRB and Coconut Palm Health}
 \label{monitoring}
 
@@ -440,7 +696,7 @@ We will continue to use automated roadside image surveys as a cost-effective ins
 
 
 \clearpage
-\subsection{Objective 3b: Roadside Video Surveys}
+\subsection{Objective 3b: Roadside Damage Surveys}
 
 \begin{framed}
 Damage symptoms such as v-shaped cuts to fronds, bore holes, and dead standing coconut palm stems are readily observed during roadside surveys. Survey data will be collected on a smart-phone dash-cam app which georeferences each image. Initially, images of coconut palm damage by CRB-G will be detected, classified and tagged by a technician. When a large number of images have been tagged, these will be used to train an object detector. This work will result in a fully automated CRB damage detection and monitoring system which generates detection alerts and damage maps. This automated system will be useful as an early detection device for CRB. Roadside surveys on Guam will be performed bimonthly and the system will also be tested on Tinian, an island just north of Guam on which CRB has never been detected.
@@ -487,19 +743,19 @@ The following four images were extracted from a draft of the University of Guam'
 	\label{fig:roadside1-4}
 \end{figure}
 
-\clearpage
-\paragraph{Guam Roadside Video Survey 2}
-
-The proportion of coconut palms damaged by CRB increased significantly from 19.2\% in
-October 2020 to 21.5\% in December 2020 (p < 0.001; Fisher's exact test).
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{../images/crb-webmap-2020-12.png}
-	\caption{Screenshot of an interactive web map of results from a roadside video survey of
-		CRB damage on Guam in December 2020 \url{https://aubreymoore.github.io/Guam-CRB-damage-map-2020-12/webmap/v1/}.}
-	\label{fig:guam02}
-\end{figure}
+%\clearpage
+%\paragraph{Guam Roadside Video Survey 2}
+%
+%The proportion of coconut palms damaged by CRB increased significantly from 19.2\% in
+%October 2020 to 21.5\% in December 2020 (p < 0.001; Fisher's exact test).
+%
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=1\linewidth]{../images/crb-webmap-2020-12.png}
+%	\caption{Screenshot of an interactive web map of results from a roadside video survey of
+%		CRB damage on Guam in December 2020 \url{https://aubreymoore.github.io/Guam-CRB-damage-map-2020-12/webmap/v1/}.}
+%	\label{fig:guam02}
+%\end{figure}
 
 
 \clearpage
@@ -519,15 +775,42 @@ The survey was performed by Mark Mangolana, Rota-DLNR and the phone containing v
 
 \clearpage
 
-\subsubsection{Recent progress}
+\subsubsection{Roadside CRB Damage Assessments on Guam}
 
-We continue to monitor CRB damage on Guam using automated roadside image surveys (Fig. \ref{fig:webmap-2021-08} and Fig. \ref{fig:timeline-2021-08}).
+We continue to monitor CRB damage on Guam using automated roadside image surveys. We also continue to improve our survey methods. Processing was simplified by changing our raw data format from videos taken at 15 images per second to georeferenced still images taken at 1 image per second. This reduced data file memory requirements by 93\% and we no longer need to rely on a second smart phone app to record latitude and longitude.
 
-We also continue to improve our survey methods. Processing was simplified by changing our raw data format from videos taken at 15 images per second to georeferenced still images taken at 1 image per second. This reduced data file memory requirements by 93\% and we no longer need to rely on a second app to record latitude and longitude.
+To date, 10 island-wide CRB damage surveys of Guam have been completed. An \href{https://github.com/aubreymoore/Guam-CRB-web-maps}{index of web maps and related data} is maintained a GitHub web page. This page shows changes in damage levels over time (Fig. \ref{fig:timeline}) and links to web maps such as one for the latest damage survey completed on 2023-09-22 (Fig. \ref{fig:webmap-2023-09-22}).
 
-In addition to using our methods for routine monitoring of CRB damage, they can be used for early detection of CRB. An initial test of this idea was done on Rota and results were reported in a webinar organized by the Depertment of the Interior - Office of Insular Affairs  \cite{usdepartmentoftheinterior-officeofinsularaffairsYouTubeVideoCoconut2021}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/timeline}
+	\caption{Changes in CRB damage over time.}
+	\label{fig:timeline}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/crb-webmap-2023-09-22}
+	\caption{Screen capture of an online interactive map of coconut rhinoceros beetle damage on Guam. \url{https://aubreymoore.github.io/Guam-CRB-Damage-Map-2023-09/webmap/}.}
+	\label{fig:webmap-2023-09-22}
+\end{figure}
+
+In addition to using our methods for routine monitoring of CRB damage, they can be used for early detection of CRB. An initial test of this idea was done on Rota and results were reported in a webinar organized by the Department of the Interior - Office of Insular Affairs  \cite{usdepartmentoftheinterior-officeofinsularaffairsYouTubeVideoCoconut2021}.
 
 Software tools developed for our automated roadside damage monitoring can be used to detect CRB damage in digital images from any source. Recently, an object detector which we trained to find characteristic v-shaped cuts caused by CRB to examine web images was used to find evidence for an unconfirmed report of CRB establishment in Mexico \cite{jacksonSocialMediaPosts2022}. We were successful (Fig.  \ref{fig:crb-mexico}).
+
+\clearpage
+\subsubsection{Roadside CRB damage assessment on Majuro, Republic of the Marshall Islands. Oct. 7, 2023}
+
+A few days after coconut rhinoceros beetle was detected on Majuro, Christian Cayanan from the University of Guam visited the island to perform an automated roadside survey of CRB damage using methods developed on Guam. The survey was performed from 11 am and 3 pm on October 7, 2023. A smart phone programmed to record a georeferenced HD images at a rate of once per second was attached to the outside of a vehicle. The vehicle which was driven the eastern tip of the island to the western tip, returning along the same route. 13,488 roadside images were recorded.
+
+These images were examined by a pair of object detectors, one which detected coconut palms and one which detected v-shaped cuts to fronds which are distinctive symptoms of CRB adult feeding damage. Results were reported in the form of an \href{https://aubreymoore.github.io/Majuro-CRB-Damage-Map-2023-10/webmap/#12/7.1098/171.2099}{interactive web map}. 
+
+The original webmap reported a much higher level of damage on Majuro than expected. Examination of images showed that the object detectors were generating many false-positive detections. The data were reanalyzed. The detection threshold was increased from 50\% to 70\% for the coconut palm detector and from 50\% to 99\% for the v-shaped cut detector. In addition all detected v-shaped cuts were examined visually.
+
+A \href{https://aubreymoore.github.io/Majuro-CRB-damage-map-1/webmap/#12/7.1082/171.2072}{revised interactive web map} has was generated. This map shows only 3 v-shaped cuts tightly clustered at a location just east of the airport.
+
+At this point, the object detectors are not very efficient and results require validation by human observers viewing images or making field observations. The coconut palm detector makes few mistakes. But the v-shaped cut detector generates many false-positives and false-negatives. Further training and tuning of both detectors is needed. However, even in the current state, the methodology is still quite useful. Data acquisition is not a problem: acquiring 13,488 images required only 4 hours and the computer workflow reduced the human labor dramatically. It was not necessary to view 13,488 images, but only to validate a few hundred images selected by the object detectors. Details of the Majuro survey are available in \href{https://aubreymoore.github.io/Majuro-tech-report-20231201/Majuro-tech-report.pdf}{this technical report}.  
 
 %![](web-screenshot.png)
 %
@@ -536,21 +819,6 @@ Software tools developed for our automated roadside damage monitoring can be use
 %![](timeline.pdf)
 %
 %**Figure 2** Changes in CRB damage over time.
-
-% TODO: \usepackage{graphicx} required
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{images/webmap-2021-08}
-	\caption{Screen capture of an online interactive map of coconut rhinoceros beetle damage on Guam. \url{https://aubreymoore.github.io/Guam-CRB-Damage-Map-2021-08/webmap}.}
-	\label{fig:webmap-2021-08}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{images/timeline-2021-08}
-	\caption{Changes in CRB damage over time.}
-	\label{fig:timeline-2021-08}
-\end{figure}
 
 \begin{figure}[H]
 	\centering
@@ -565,15 +833,56 @@ Software tools developed for our automated roadside damage monitoring can be use
 
 \subsection{Forest Insect and Disease Leaflet (FIDL) for Coconut Rhinoceros Beetle}
 
-The PI is first author on a Forest Service FIDL for CRB (submitted). 
+The PI is first author on a Forest Service FIDL for CRB. Available online at: \\
+\begin{footnotesize}
+\url{https://www.fs.usda.gov/foresthealth/docs/fidls/FIDL-191-CoconutRhinocerosBeetle.pdf} 
+\end{footnotesize}
 
 \subsection{Using Harmonic Radar to Detect CRB Breeding Sites}
 
-Effective control of CRB requires location and destruction of larval breeding sites which my occur anywhere were there is an accumulation of decaying plant material. Previously, we successfully tracked radio-tagged CRB adults to find cryptic breeding sites. But high cost of radio transmitters and limited battery capacity made this method too expensive for regular use. We suggest that harmonic radar tags may be a cost-effective replacement for miniaturized radio transmitters \cite{mooreProposalDetectingCoconut2022}. Harmonic radar tags do not require a battery, are very inexpensive (about \$2 per tag) and have unlimited shelf and field life.
+Effective control of CRB requires location and destruction of larval breeding sites which my occur anywhere were there is an accumulation of decaying plant material. Previously, we successfully tracked radio-tagged CRB adults to find cryptic breeding sites. But high cost of radio transmitters and limited battery capacity made this method too expensive for regular use. We suggest that harmonic radar tags may be a cost-effective replacement for miniaturized radio transmitters and have published a journal article on this idea \cite{mooreProposalDetectingCoconut2022}. Harmonic radar tags do not require a battery, are very inexpensive (about \$2 per tag) and have unlimited shelf and field life.
 
-In July 2022, Dr. Matt Siderhurst and students from Eastern Mennonite University, Virginia worked with us on Guam to field test the idea of tracking beetles with miniature harmonic radar tags attached to them. We were also assisted by Michael Jordan, US Forest Service.
+A field trial was funded by Forest Service grant 20-DG-11052021-227.
+During July 2023, Dr. Siderhurst and two of his students, Skylar List and Theodore Yoder, traveled to Guam to perform this trial. We constructed harmonic radar tags by attaching antennae to diodes using conductive silver paint and glue. These tags were then glued onto pronota of CRB adults. Sixty-four out of 101 tagged CRB flew out of containers set up at 2 field sites. Unfortunately, we were not able to detect any of these beetles during ground-based searches using harmonic radar detectors. For details, see \href{https://github.com/aubreymoore/Harmonic-Radar/blob/master/final-report-202212/final-report-202212.pdf}{the project's final report}. 
 
-This feasibility study was funded by another Forest Service grant and progress will be reported separately.
+Examination of 36 beetles which failed to fly showed that most (22 of them) had antennae wires which had detached from diodes. We think that conductive silver paint and glue may not be strong enough for attachment of nitinol antenna wires to tags applied to CRB because these large beetles are very energetic and their movements cause breakage of the connections between diodes and nitinol wire antennae. 
+
+\subsubsection{Improved Harmonic Tag Construction Method}
+
+We are currently attempting to solve this problem by attaching antenna wires to diodes using a special solder and flux combination design specifically for nitinol wire. We are very lucky that Michael Jordan of the US Forest Service who is stationed on Guam has very specialized skills in soldering miniature electronic components which he developed while serving in the US Navy.
+
+Specialized soldering equipment and flux designed specifically for nitinol were purchased. New tags were constructed (Fig. \ref{fig:harmonicradartags}), but these have not yet been tested in a new field trial.
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=-90,origin=c,width=0.6\linewidth]{images/harmonic_radar_tags}
+	\caption{Michael Jordan, US Forest Service, soldering nitinol antennae wires onto harmonic radar diodes.}
+	\label{fig:harmonicradartags}
+\end{figure}
+
+\clearpage
+\subsection{Role of Symbionts in Rearing CRB}
+
+In attempt to speed up development of CRB grubs in our rearing program, we added frass from third instar larvae into larval medium (sterilized finely ground material from dead standing coconut stems). Weight gain was significantly improved (Fig. \ref{fig:symbiontmass}). However, survival mortality remained low (Fig. \ref{fig:symbiontsurvival}).
+
+
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/symbiont_mass}
+	\caption{}
+	\label{fig:symbiontmass}
+\end{figure}
+
+% TODO: \usepackage{graphicx} required
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/symbiont_survival}
+	\caption{}
+	\label{fig:symbiontsurvival}
+\end{figure}
 
 \newpage
 

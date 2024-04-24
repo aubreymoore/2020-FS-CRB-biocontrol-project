@@ -53,7 +53,7 @@ breaklinks=true,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=tru
 
 \author{Aubrey Moore PhD\\University of Guam College of Natural and Applied Sciences}
 
-\date{February 29, 2024; Updated April 18, 2024}
+\date{February 29, 2024; Updated April 23, 2024}
 
 \maketitle
 
@@ -87,14 +87,65 @@ Most recent online version: \\
 
 \clearpage
 
-\section{Executive Summary}
-The major objective of this project was not achieved. We failed to establish self-sustaining biological control of coconut rhinoceros beetle Biotype G in Micronesia.
+\section{Summary and Recommendations}
+
+\subsection{Bioassays Results}
+
+The major objective of this project was to find and release an isolate of \textit{Oryctes rhinoceros} nudivirus (OrNV) which is an effective biological control agent for coconut rhinoceros beetles on Guam and elsewhere in Micronesia. OrNV suppresses CRB populations within its native range and it has been used as a very effective biological control agent on many islands where CRB is an invasive species. OrNV was released in the Palau Islands during the 1970s in response to a severe CRB infestation which had killed most of the coconut trees. Fifty years after OrNV was released in Palau, this virus infects about 75\% of the CRB population \cite{tanakaConfirmationOryctesRhinoceros2021a} and keeps CRB damage at low levels.  
+
+The major objective of this project was not achieved because none of the OrNV isolates we tested in laboratory bioassays resulted in significant mortality (Table \ref{bioassay_summary}). We also did not detect any sublethal responses such as reduction in fecundity, flight, or feeding activity.  It should be noted that mortality levels in our bioassay experimental control groups was very high. In the last 4 bioassays, 60\% of beetles were infested with nematodes.   
+
+\begin{table}[H]
+	\footnotesize
+	\centering
+	\caption{Summary of 2023 Bioassay Results}
+	\label{tab:bioassay_summary}
+	\begin{tabular}{l p{1in} p{1in} p{.5in} p{.75in} p{.75in}}
+		\toprule
+		Isolate & Isolate source & Original source  & Dose method & Significant mortality\textsuperscript{a} & Significant infection\textsuperscript{b} \\ \midrule
+		Palau gut samples & Palau Community College & Palau & food inclusion & no & no \\ \midrule
+		Palau purified virus & Tokyo Univ. of Ag. and Tech. & Palau & food inclusion & no & no \\ \midrule
+		DUG42                & AgResearch New Zealand & Philippines 2016 & tube method & no & yes\\ \midrule
+		PNG                  & AgResearch New Zealand & PNG 1988         & tube method & no & no  \\ \midrule
+		V23B                 & AgResearch New Zealand & Philippines 1980 & tube method & no & yes \\ \midrule
+		X2B                  & AgResearch New Zealand & Philippines 1983 & tube method & no & no \\ \bottomrule
+	\end{tabular}
+\end{table}
+\begin{footnotesize}
+\textsuperscript{a}Significant mortality indicates that the death rate of beetles treated with OrNV was significantly higher than for untreated beetles. \textsuperscript{b}Significant infection indicates that the OrNV+ rate of midgut samples from beetles treated with OrNV was significantly higher than for untreated beetles.
+\end{footnotesize}
+
+\begin{figure}[H]
+	\centering
+	\caption{Summary of bioassay results from a previous project. The full report can be downloaded from 			\url{https://github.com/aubreymoore/FY19-PPA-Report-1/raw/master/PPA18-report-final.pdf}.}
+	\label{fig:previousbioassays}
+	\includegraphics[width=\linewidth]{images/previous_bioassays}
+\end{figure}
+
+\subsubsection{Recommendations}
+\begin{enumerate}
+	\item Even though none of the current set of lab bioassays resulted in significant mortality, the search for an OrNV isolate which can be used as an effective biological control agent for the Guam CRB population should be continued. In a previous series of bioassays (Fig. \ref{fig:previousbioassays}) with Guam beetles, isolate V23B dosed by mouth, resulted in significant mortality. V23B should remain as a candidate.
+	\item The nematodes infecting 60\% of the beetles in last 4 bioassays need to be identified. They may be an entomopathogenic species useful for biocontrol. This is the first report of nematodes associated with CRB on Guam.
+\end{enumerate}
+
+\subsection{Automated CRB Damage Surveys}
+
+The automated roadside CRB damage survey method developed on Guam was also tested on Rota and on Majuro. This system uses a smart phone to acquire roadside images at a rate of one per minute. Later, AI object detectors inspect each image to detect coconut palms and damage caused by CRB. Damage rating is based on a standardized scale developed by Ag Research New Zealand. Output is delivered as a publicly available interactive web map. This method provides a very inexpensive way to build island-wide damage maps for resource managers. Work has begun on a drone based system which can be used in areas without road access.
+
+\subsection{Recommendations}
+
+\begin{enumerate}
+	\item Quarterly roadside damage surveys should be continued on Guam to track spatial-temporal changes to CRB damage.
+	\item The prototype system needs to be documented and updated to current AI technology and shared as free, open-source software (FOSS).
+	\item Funding should be acquired to support further development. Note that a preproposal was submitted to SERDP but was not funded.
+\end{enumerate}
+
 \clearpage
 
-\section{Objective 1: Survey to Determine Background OrNV Incidence} 
+\section{Objective 1: Survey to Determine Background OrNV Incidence on Guam} 
 
 \begin{framed}
-CRB adults collected from breeding sites and pheromone traps throughout Guam will be tested for presence of OrNV using PCR.  Laboratory bioassays will be performed on OrNV isolated from these beetles to evaluate potential for biological control.
+CRB adults collected from breeding sites and pheromone traps throughout Guam will be tested for presence of OrNV using PCR.  Laboratory bioassays will be performed on OrNV isolated from these beetles to evaluate potential for biological control. 
 \end{framed} 
 
 \subsection{Previously reported progress}
